@@ -151,6 +151,18 @@ scale: 1.1;
     opacity: 1;
   }
 }
+
+@keyframes num-fade {
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .bottom {
   position: absolute;
   translate: 0px 10.5rem;
@@ -162,6 +174,6 @@ scale: 1.1;
 }
 
 .slipid{
-  
+  animation: num-fade .5s linear;
 }
 </style>

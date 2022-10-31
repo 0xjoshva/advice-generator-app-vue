@@ -2,7 +2,7 @@
   <section>
     <div class="container" v-for="slip in slip" v-bind:key="slip.id">
       <div v-if="slip">
-        <p class="adviceid">ADVICE #{{ slip.id }}</p>
+        <p class="adviceid">ADVICE # <span class="slipid">{{ slip.id }}</span></p>
 
         <p class="quote">"{{ slip.advice }}"</p>
       </div>
@@ -92,7 +92,7 @@ section {
   color: var(--lcyan);
   width: 100%;
   text-align: center;
-  animation: drop-in 1.5s ease-in-out;
+  animation: drop-in .5s ease-in-out;
 }
 .divider {
   padding-top: 3rem;
@@ -159,5 +159,9 @@ scale: 1.1;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.slipid{
+  
 }
 </style>

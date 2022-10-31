@@ -85,13 +85,14 @@ section {
   color: var(--neong);
   letter-spacing: 3px;
   font-weight: 700;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .quote {
   font-size: 28px;
   color: var(--lcyan);
   width: 100%;
   text-align: center;
+  animation: drop-in 1.5s ease-in-out;
 }
 .divider {
   padding-top: 3rem;
@@ -137,7 +138,19 @@ scale: 1.1;
     top: -10px;
   }
 }
+@keyframes drop-in{
+  0%{
+    translate: 0px -100px;
+    text-shadow: 20px 20px 0px black;
+    opacity: 0;
 
+  }
+  100%{
+    translate: 0px 0px;
+    text-shadow: none;
+    opacity: 1;
+  }
+}
 .bottom {
   position: absolute;
   translate: 0px 10.5rem;
